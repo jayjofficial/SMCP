@@ -194,32 +194,6 @@ img{max-width:100%;height:auto}
 .contact-hub-copy a,.contact-hub-copy span{font-size:14px;color:#07182e;font-weight:600;word-break:break-word}
 .contact-hub-copy a:hover{color:#002247;text-decoration:underline}
 
-/* Upcoming Conference Cards & Partnership Layout */
-.collab-partnership-panel{background:#fff;border:1px solid #dfe5ec;border-left:4px solid var(--navy);padding:36px;box-shadow:var(--shadow-soft);height:100%}
-.upcoming-conf-header .upcoming-conf-title{font-family:var(--serif);font-size:30px;font-weight:700;color:var(--navy);margin:0}
-.conf-cards-stack{display:flex;flex-direction:column;gap:20px}
-.conf-edition-card{background:#fff;border:1px solid #dfe5ec;box-shadow:var(--shadow-soft);padding:24px 28px;transition:border-color .18s ease,box-shadow .18s ease;border-radius:2px}
-.conf-edition-card:hover{border-color:var(--navy);box-shadow:0 12px 30px rgba(0,34,71,.12)}
-.conf-card-top{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:14px}
-.conf-card-header-left{display:flex;align-items:center;gap:14px}
-.conf-badge-logo{width:46px;height:46px;object-fit:contain;background:#07172d;border-radius:50%;padding:4px;flex-shrink:0}
-.conf-card-name{font-family:var(--serif);font-size:20px;font-weight:700;color:var(--navy);margin:0;line-height:1.25}
-.conf-verified{display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;background:#0a85ea;color:#fff;border-radius:50%;font-size:11px;font-weight:bold;flex-shrink:0}
-.conf-card-date{font-size:13.5px;color:#5a687d;margin:4px 0 0;font-weight:600}
-.conf-edition-label{display:inline-block;background:#f0f4f9;color:var(--navy);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;padding:2px 8px;margin-left:6px;border-radius:2px}
-.conf-card-status{font-size:13px;font-weight:700;color:#0b7a42;display:flex;align-items:center;gap:6px;white-space:nowrap}
-.status-dot{font-size:10px;color:#0fb365}
-.conf-pills-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
-.conf-pill{font-size:11.5px;color:#495668;background:#f4f6f9;border:1px solid #dce2eb;padding:4px 10px;font-weight:600;border-radius:3px}
-.conf-pill.highlight{background:#eef7f0;color:#0d6937;border-color:#c8e7d2;font-weight:700}
-.conf-card-body{background:#f9fbfd;border:1px solid #e7ecf2;padding:12px 16px;margin-bottom:14px;border-radius:2px}
-.conf-prize-banner{font-size:13px;color:#874d00;background:#fff8e6;border-left:3px solid #d7a11e;padding:6px 10px;margin-bottom:8px;line-height:1.45}
-.conf-highlight-banner{font-size:13px;color:#0b4279;background:#eef5fc;border-left:3px solid #0a85ea;padding:6px 10px;margin-bottom:8px;line-height:1.45}
-.conf-committees-block{font-size:13px;color:#3f4d60;line-height:1.5}
-.conf-committees-block strong{color:var(--navy)}
-.conf-card-footer{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;padding-top:4px}
-.conf-perks{font-size:12px;color:#6b788a;font-style:italic}
-.conf-apply-btn{min-height:38px;padding:8px 22px;font-size:12.5px}
 
 /* ===================================================
    RESPONSIVE MEDIA QUERIES (Cascading Desktop to Mobile)
@@ -265,11 +239,6 @@ img{max-width:100%;height:auto}
   .contact-hub-card{padding:24px 18px}
   .form-control-smcp{font-size:16px} /* Prevents iOS Safari auto-zoom on input focus */
 
-  .collab-partnership-panel{padding:26px 20px;height:auto}
-  .conf-edition-card{padding:20px 16px}
-  .conf-card-name{font-size:18px}
-  .conf-card-footer{flex-direction:column;align-items:stretch}
-  .conf-apply-btn{width:100%;text-align:center}
 }
 
 /* Portrait Mobile Phones (<= 575px) */
@@ -278,11 +247,6 @@ img{max-width:100%;height:auto}
   .site-header{min-height:72px}
   .navbar{min-height:72px;padding:8px 0}
   .site-logo{width:56px;height:56px}
-  
-  .upcoming-conf-header .upcoming-conf-title{font-size:24px}
-  .conf-card-top{flex-direction:column;gap:10px}
-  .conf-card-status{width:100%}
-  .conf-card-header-left{align-items:flex-start}
   
   .hero{min-height:auto;padding:64px 0 54px}
   .hero h1,.page-hero h1{font-size:clamp(30px,8vw,38px);line-height:1.12}

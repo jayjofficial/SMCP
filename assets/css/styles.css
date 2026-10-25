@@ -185,3 +185,31 @@ img{max-width:100%}
 .team-card .team-info{min-height:132px}
 .team-placeholder{height:280px}
 @media(max-width:575px){.team-role-list span{font-size:9px}.team-card .team-info{min-height:auto}.team-order-note{padding:0 18px}}
+
+/* Contact Form & Convex Portal Styles */
+.contact-form-card{background:#fff;border:1px solid #07182e;border-top:4px solid #002247;padding:40px;box-shadow:var(--shadow)}
+.convex-badge{display:inline-flex;align-items:center;gap:6px;font-size:11px;text-transform:uppercase;letter-spacing:.14em;font-weight:800;color:#002247;background:#edf3f9;border:1px solid #cfdbe8;padding:4px 10px;margin-bottom:14px}
+.convex-badge-dot{width:7px;height:7px;border-radius:50%;background:#0fb365;box-shadow:0 0 8px rgba(15,179,101,.6)}
+.form-label-smcp{display:block;font-size:13px;font-weight:700;letter-spacing:.02em;color:#07182e;margin-bottom:6px}
+.form-label-smcp .req{color:#d32f2f;margin-left:2px}
+.form-control-smcp{width:100%;border:1px solid #c9d3e0;background:#fff;color:#101722;padding:12px 14px;font-size:14px;font-family:var(--sans);border-radius:0;transition:border-color .18s ease,box-shadow .18s ease}
+.form-control-smcp:focus{border-color:#002247;outline:none;box-shadow:0 0 0 3px rgba(0,34,71,.12)}
+.form-control-smcp::placeholder{color:#8b97a8}
+.form-feedback-alert{display:none;padding:16px 20px;margin-bottom:24px;border-left:4px solid transparent;font-size:14px;line-height:1.55}
+.form-feedback-alert.show{display:block;animation:fadeIn .25s ease-out}
+.form-feedback-success{background:#edf9f0;border-left-color:#107c41;color:#0f582f;border-top:1px solid #d1edd7;border-right:1px solid #d1edd7;border-bottom:1px solid #d1edd7}
+.form-feedback-error{background:#fdf2f2;border-left-color:#d32f2f;color:#8a1b1b;border-top:1px solid #f8d7d7;border-right:1px solid #f8d7d7;border-bottom:1px solid #f8d7d7}
+.form-feedback-info{background:#f0f5fb;border-left-color:#002247;color:#0a294d;border-top:1px solid #d6e2f0;border-right:1px solid #d6e2f0;border-bottom:1px solid #d6e2f0}
+.btn-submit-loading{display:inline-flex;align-items:center;gap:8px}
+.spinner-smcp{width:16px;height:16px;border:2px solid rgba(255,255,255,.3);border-top-color:#fff;border-radius:50%;animation:spin .8s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes fadeIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:translateY(0)}}
+.contact-hub-card{border:1px solid #dfe5ec;background:#fff;padding:32px;box-shadow:var(--shadow-soft);margin-bottom:24px}
+.contact-hub-card h3{font-family:var(--serif);font-size:26px;font-weight:700;color:#07182e;margin-bottom:14px}
+.contact-hub-item{display:flex;align-items:flex-start;gap:14px;padding:14px 0;border-bottom:1px solid #eef2f6}
+.contact-hub-item:last-child{border-bottom:none;padding-bottom:0}
+.contact-hub-icon{width:38px;height:38px;background:#002247;color:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:16px}
+.contact-hub-copy strong{display:block;font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:#5a687d}
+.contact-hub-copy a,.contact-hub-copy span{font-size:14px;color:#07182e;font-weight:600;word-break:break-word}
+.contact-hub-copy a:hover{color:#002247;text-decoration:underline}
+@media(max-width:767px){.contact-form-card{padding:26px 20px}.contact-hub-card{padding:24px 18px}}

@@ -30,8 +30,136 @@
   </nav>
 </header>
 <main>
-  <section class="page-hero"><div class="container-xl"><h1>Contact SMCP MUN</h1><p>Connect with the Secretariat for registration, collaboration, media, and conference support.</p></div></section>
-  <section class="section"><div class="container-xl"><div class="row g-4"><div class="col-md-4"><div class="conference-card contact-card"><h3>Email</h3><p><a href="mailto:info.smcpmun@gmail.com">info.smcpmun@gmail.com</a></p></div></div><div class="col-md-4"><div class="conference-card contact-card"><h3>Instagram</h3><p><a href="https://www.instagram.com/smcpmun/" target="_blank" rel="noopener">@smcpmun</a></p></div></div><div class="col-md-4"><div class="conference-card contact-card"><h3>LinkedIn</h3><p><a href="https://www.linkedin.com/in/smcp-the-mun-230759407/" target="_blank" rel="noopener">SMCP the MUN</a></p></div></div></div><div class="text-center mt-5"><a class="btn-smcp" href="https://mymun.com/conferences/smcp-mun-second-edition-2026/apply" target="_blank" rel="noopener">Register on MyMUN</a></div></div></section>
+  <section class="page-hero">
+    <div class="container-xl">
+      <div class="eyebrow" style="color: #cad5e2; margin-bottom: 8px;">Connect With Leadership</div>
+      <h1>Contact SMCP MUN</h1>
+      <p>Connect directly with the Secretariat for delegate registrations, committee allocations, school delegations, press inquiries, and conference partnerships.</p>
+    </div>
+  </section>
+
+  <section class="section section-soft">
+    <div class="container-xl">
+      <div class="row g-5">
+        <!-- Left Column: Contact Hub & Secretariat Info -->
+        <div class="col-lg-5">
+          <div class="contact-hub-card">
+            <span class="eyebrow">Secretariat Office</span>
+            <h3>Direct Communication</h3>
+            <p class="muted mb-4">Our organizing committees and Secretariat officers monitor incoming communications daily to support all delegates, advisors, and partner institutions.</p>
+            
+            <div class="contact-hub-item">
+              <div class="contact-hub-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              </div>
+              <div class="contact-hub-copy">
+                <strong>Official Secretariat Email</strong>
+                <a href="mailto:info.smcpmun@gmail.com">info.smcpmun@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="contact-hub-item">
+              <div class="contact-hub-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+              </div>
+              <div class="contact-hub-copy">
+                <strong>Instagram</strong>
+                <a href="https://www.instagram.com/smcpmun/" target="_blank" rel="noopener">@smcpmun</a>
+              </div>
+            </div>
+
+            <div class="contact-hub-item">
+              <div class="contact-hub-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+              </div>
+              <div class="contact-hub-copy">
+                <strong>LinkedIn Network</strong>
+                <a href="https://www.linkedin.com/in/smcp-the-mun-230759407/" target="_blank" rel="noopener">SMCP the MUN</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Conference Application Card -->
+          <div class="conference-card contact-card">
+            <span class="eyebrow">Delegate Application</span>
+            <h3 class="mt-1">SMCP MUN Second Edition 2026</h3>
+            <p class="muted">Individual delegate and institutional delegation registrations are hosted exclusively via the MyMUN portal.</p>
+            <a class="btn-smcp w-100 mt-2 text-center" href="https://mymun.com/conferences/smcp-mun-second-edition-2026/apply" target="_blank" rel="noopener">
+              Register on MyMUN
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Column: Interactive Convex Form -->
+        <div class="col-lg-7">
+          <div class="contact-form-card">
+            <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-2">
+              <span class="eyebrow mb-0">Inquiry Dispatch</span>
+              <span class="convex-badge">
+                <span class="convex-badge-dot"></span> Convex Powered
+              </span>
+            </div>
+            
+            <h2 class="section-title-sm mb-2" style="color: #07182e;">Send a Message to the Secretariat</h2>
+            <p class="muted mb-4" style="font-size: 15px;">Submit your question or proposal below. Inquiries are securely transmitted to our Convex cloud backend and routed to the Secretariat.</p>
+
+            <div id="contactAlert" class="form-feedback-alert" role="alert"></div>
+
+            <form id="contactForm" novalidate>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="contactName" class="form-label-smcp">Full Name <span class="req">*</span></label>
+                  <input type="text" class="form-control-smcp" id="contactName" name="name" placeholder="e.g. Eleanor Roosevelt" required>
+                </div>
+
+                <div class="col-md-6">
+                  <label for="contactEmail" class="form-label-smcp">Email Address <span class="req">*</span></label>
+                  <input type="email" class="form-control-smcp" id="contactEmail" name="email" placeholder="e.g. delegate@institution.edu" required>
+                </div>
+
+                <div class="col-md-6">
+                  <label for="contactOrg" class="form-label-smcp">Delegation / Institution</label>
+                  <input type="text" class="form-control-smcp" id="contactOrg" name="organization" placeholder="e.g. Oxford University / High School">
+                </div>
+
+                <div class="col-md-6">
+                  <label for="contactCategory" class="form-label-smcp">Inquiry Category <span class="req">*</span></label>
+                  <select class="form-control-smcp" id="contactCategory" name="category" required>
+                    <option value="General Secretariat Inquiry">General Secretariat Inquiry</option>
+                    <option value="Delegate & Delegation Registration">Delegate & Delegation Registration</option>
+                    <option value="Committee Topics & Study Guides">Committee Topics & Study Guides</option>
+                    <option value="Sponsorships & Partnerships">Sponsorships & Partnerships</option>
+                    <option value="Press & Media Relations">Press & Media Relations</option>
+                  </select>
+                </div>
+
+                <div class="col-12">
+                  <label for="contactSubject" class="form-label-smcp">Subject <span class="req">*</span></label>
+                  <input type="text" class="form-control-smcp" id="contactSubject" name="subject" placeholder="What is this inquiry regarding?" required>
+                </div>
+
+                <div class="col-12">
+                  <label for="contactMessage" class="form-label-smcp">Message <span class="req">*</span></label>
+                  <textarea class="form-control-smcp" id="contactMessage" name="message" rows="5" placeholder="Please elaborate on your inquiry or request with as much detail as possible..." required></textarea>
+                </div>
+
+                <div class="col-12 pt-2">
+                  <button type="submit" id="contactSubmitBtn" class="btn-smcp w-100">
+                    <span id="contactSubmitSpinner" class="spinner-smcp" style="display: none;"></span>
+                    <span id="contactSubmitText">Send Message</span>
+                  </button>
+                  <div class="d-flex justify-content-between align-items-center mt-3 text-muted" style="font-size: 12px;">
+                    <span>Responses typically dispatched within 24–48 hours</span>
+                    <span>Endpoint: <code>decisive-parrot-0.convex.site</code></span>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </main>
 <footer class="footer">
   <div class="container-xl">
@@ -59,5 +187,6 @@
   </div>
 </footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/convex-config.js"></script>
 <script src="assets/js/script.js"></script>
 </body></html>

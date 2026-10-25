@@ -1,12 +1,41 @@
 /**
  * Convex Configuration & Client-Side Integration for SMCP MUN
- * Cloud URL: https://decisive-parrot-0.convex.cloud
- * HTTP Actions URL: https://decisive-parrot-0.convex.site
+ *
+ * Development Environment:
+ * - Cloud URL: https://tame-kingfisher-14.convex.cloud
+ * - HTTP Actions URL: https://tame-kingfisher-14.convex.site
+ *
+ * Production Environment:
+ * - Cloud URL: https://decisive-warthog-151.convex.cloud
+ * - HTTP Actions URL: https://decisive-warthog-151.convex.site
  */
+
+const CONVEX_ENVIRONMENTS = {
+  development: {
+    cloudUrl: "https://tame-kingfisher-14.convex.cloud",
+    httpActionsUrl: "https://tame-kingfisher-14.convex.site"
+  },
+  production: {
+    cloudUrl: "https://decisive-warthog-151.convex.cloud",
+    httpActionsUrl: "https://decisive-warthog-151.convex.site"
+  }
+};
+
+// Automatic environment detection (development on localhost / 127.0.0.1 / file://; production otherwise)
+const isLocalhost = 
+  window.location.hostname === "localhost" || 
+  window.location.hostname === "127.0.0.1" || 
+  window.location.protocol === "file:";
+
+const currentEnv = isLocalhost ? "development" : "production";
+const selectedConfig = CONVEX_ENVIRONMENTS[currentEnv];
+
 window.CONVEX_CONFIG = {
-  cloudUrl: "https://decisive-parrot-0.convex.cloud",
-  httpActionsUrl: "https://decisive-parrot-0.convex.site",
-  contactEndpoint: "/contact"
+  currentEnv: currentEnv,
+  cloudUrl: selectedConfig.cloudUrl,
+  httpActionsUrl: selectedConfig.httpActionsUrl,
+  contactEndpoint: "/contact",
+  environments: CONVEX_ENVIRONMENTS
 };
 
 /**
@@ -57,6 +86,13 @@ function backupInquiryLocally(inquiry) {
  * Interactive Contact Form Handler
  */
 document.addEventListener("DOMContentLoaded", () => {
+  // Update endpoint display tag if present
+  const endpointDisplay = document.getElementById("convexEndpointDisplay");
+  if (endpointDisplay) {
+    const host = new URL(window.CONVEX_CONFIG.httpActionsUrl).host;
+    endpointDisplay.textContent = host;
+  }
+
   const contactForm = document.getElementById("contactForm");
   if (!contactForm) return;
 
@@ -102,7 +138,8 @@ document.addEventListener("DOMContentLoaded", () => {
       subject: (formData.get("subject") || "").toString().trim(),
       message: (formData.get("message") || "").toString().trim(),
       submittedAt: new Date().toISOString(),
-      source: "SMCP MUN Website Portal"
+      source: "SMCP MUN Website Portal",
+      environment: window.CONVEX_CONFIG.currentEnv
     };
 
     if (!payload.name || !payload.email || !payload.subject || !payload.message) {
@@ -113,7 +150,7 @@ document.addEventListener("DOMContentLoaded", () => {
     setLoading(true);
 
     try {
-      // Attempt transmission to Convex HTTP Action
+      // Attempt transmission to active Convex HTTP Action
       await callConvexAction(window.CONVEX_CONFIG.contactEndpoint, payload);
 
       // Back up locally as well for tracking
@@ -122,7 +159,7 @@ document.addEventListener("DOMContentLoaded", () => {
       showAlert(
         "success",
         `<strong>✓ Message Dispatched Successfully!</strong><br>
-         Thank you, <strong>${escapeHtml(payload.name)}</strong>. Your inquiry has been securely sent to the SMCP Secretariat via Convex.<br>
+         Thank you, <strong>${escapeHtml(payload.name)}</strong>. Your inquiry has been securely sent to the SMCP Secretariat via Convex (${window.CONVEX_CONFIG.currentEnv}).<br>
          Our team will review your message and reply to <em>${escapeHtml(payload.email)}</em> promptly.`
       );
       contactForm.reset();
@@ -136,7 +173,7 @@ document.addEventListener("DOMContentLoaded", () => {
       showAlert(
         "info",
         `<strong>Inquiry Logged:</strong> Thank you, <strong>${escapeHtml(payload.name)}</strong>. Your message has been captured.
-         <br><small class="text-muted">Convex Connection Status: Transmission queued. You may also email us directly at <a href="mailto:info.smcpmun@gmail.com" class="fw-bold">info.smcpmun@gmail.com</a>.</small>`
+         <br><small class="text-muted">Convex Connection Status: Transmission queued (${window.CONVEX_CONFIG.currentEnv}). You may also email us directly at <a href="mailto:info.smcpmun@gmail.com" class="fw-bold">info.smcpmun@gmail.com</a>.</small>`
       );
       contactForm.reset();
     } finally {

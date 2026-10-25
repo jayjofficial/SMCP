@@ -2,9 +2,13 @@
 
 This directory contains the Convex cloud functions that power the interactive inquiry portal on `contact.html`.
 
-## Deployment Details
-- **Cloud URL**: `https://decisive-parrot-0.convex.cloud`
-- **HTTP Actions URL**: `https://decisive-parrot-0.convex.site`
+## Deployment Environments
+- **Development**:
+  - Cloud URL: `https://tame-kingfisher-14.convex.cloud`
+  - HTTP Actions URL: `https://tame-kingfisher-14.convex.site`
+- **Production**:
+  - Cloud URL: `https://decisive-warthog-151.convex.cloud`
+  - HTTP Actions URL: `https://decisive-warthog-151.convex.site`
 
 ## How it Works
 1. **Schema (`schema.ts`)**: Defines the `inquiries` table storing name, email, organization, category, subject, message, and timestamp.
@@ -16,7 +20,7 @@ When Node.js is installed on your machine, deploy updates to your Convex develop
 ```bash
 npx convex dev
 ```
-or to deploy directly:
+To deploy directly to production:
 ```bash
 npx convex deploy
 ```

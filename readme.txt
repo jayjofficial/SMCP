@@ -10,7 +10,9 @@ How to View Website UI:
 
 Convex Backend (API / Database):
 - Note: Convex Cloud is a backend service (database & API), not a website frontend host.
-- Cloud URL: https://decisive-parrot-0.convex.cloud
-- HTTP Actions URL: https://decisive-parrot-0.convex.site
-- Configured in .env, .env.local, and assets/js/convex-config.js
+- Development Cloud URL: https://tame-kingfisher-14.convex.cloud
+- Development HTTP Actions: https://tame-kingfisher-14.convex.site
+- Production Cloud URL: https://decisive-warthog-151.convex.cloud
+- Production HTTP Actions: https://decisive-warthog-151.convex.site
+- Configured in .env, .env.local, and assets/js/convex-config.js (auto-detects local vs production)
 

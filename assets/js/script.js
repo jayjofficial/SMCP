@@ -39,4 +39,28 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+
+  // Smooth scroll animations for timeline items (alternating left/right entrance)
+  const timelineItems = document.querySelectorAll('.timeline-item');
+  if (timelineItems.length > 0) {
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        root: null,
+        rootMargin: '0px 0px -40px 0px',
+        threshold: 0.12
+      });
+
+      timelineItems.forEach(item => observer.observe(item));
+    } else {
+      // Fallback if IntersectionObserver unsupported
+      timelineItems.forEach(item => item.classList.add('is-visible'));
+    }
+  }
 });

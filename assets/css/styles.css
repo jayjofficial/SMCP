@@ -129,6 +129,42 @@ img{max-width:100%;height:auto}
 .rule-item{border-left:4px solid var(--navy);padding-left:22px;margin-bottom:20px}
 .rule-item h4{font-size:17px;font-weight:800}
 
+/* Conference Timeline Component */
+.timeline-track{position:relative;padding:10px 0;max-width:840px;margin:0 auto}
+.timeline-track:before{content:"";position:absolute;left:24px;top:10px;bottom:10px;width:2px;background:#dfe5ec}
+.timeline-item{position:relative;padding-left:64px;margin-bottom:34px}
+.timeline-item:last-child{margin-bottom:0}
+.timeline-dot{position:absolute;left:15px;top:6px;width:20px;height:20px;border-radius:50%;background:#fff;border:3px solid var(--navy);z-index:2;box-shadow:0 0 0 4px #fff}
+.timeline-item.past .timeline-dot{border-color:#5a687d;background:#5a687d}
+.timeline-item.active .timeline-dot{border-color:var(--navy);background:var(--navy);box-shadow:0 0 0 4px rgba(0,34,71,.15)}
+.timeline-card{background:#fff;border:1px solid #dfe5ec;padding:26px 28px;box-shadow:var(--shadow-soft);transition:border-color .18s ease,box-shadow .18s ease}
+.timeline-card:hover{border-color:var(--navy);box-shadow:0 12px 28px rgba(0,34,71,.08)}
+.timeline-header{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:10px}
+.timeline-date{font-size:13px;font-weight:700;color:#5a687d;text-transform:uppercase;letter-spacing:.06em}
+.timeline-tag{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;padding:3px 10px;border-radius:2px}
+.timeline-tag.past{background:#f0f2f5;color:#5a687d}
+.timeline-tag.active{background:#eef7f0;color:#0d6937;border:1px solid #c8e7d2}
+.timeline-title{font-family:var(--serif);font-size:24px;font-weight:700;color:var(--navy);margin:0 0 8px;line-height:1.2}
+.timeline-desc{color:var(--muted);font-size:14.5px;line-height:1.6;margin-bottom:14px}
+.timeline-meta{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.timeline-meta span{font-size:12px;color:#3b4756;background:#f5f7fa;padding:4px 10px;border:1px solid #e2e7ef;border-radius:2px;font-weight:600}
+.timeline-card .btn-smcp{min-height:38px;padding:8px 22px;font-size:12.5px}
+
+/* Mini Timeline Component */
+.mini-timeline-card{background:#fff;border:1px solid var(--navy);box-shadow:var(--shadow);padding:30px}
+.mini-timeline-track{position:relative;padding-left:26px;margin-top:18px}
+.mini-timeline-track:before{content:"";position:absolute;left:7px;top:8px;bottom:8px;width:2px;background:#dfe5ec}
+.mini-timeline-item{position:relative;margin-bottom:20px}
+.mini-timeline-item:last-child{margin-bottom:0}
+.mini-dot{position:absolute;left:-26px;top:4px;width:14px;height:14px;border-radius:50%;background:#fff;border:2.5px solid #5a687d;box-shadow:0 0 0 3px #fff}
+.mini-dot.active{border-color:var(--navy);background:var(--navy)}
+.mini-date{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#5a687d;margin-bottom:2px}
+.mini-content strong{display:block;font-size:15px;color:var(--navy);font-weight:700}
+.mini-content p{font-size:13px;line-height:1.5}
+.mini-link{font-size:12.5px;font-weight:700;color:var(--navy);display:inline-block;margin-top:4px}
+.mini-link:hover{text-decoration:underline}
+
+
 /* Team Page */
 .team-hero{text-align:center;padding:86px 0 38px}
 .team-section-title{font-family:var(--serif);font-weight:700;font-size:34px;border-bottom:1px solid #dfe4ea;padding-bottom:14px;margin-bottom:24px}
@@ -281,6 +317,14 @@ img{max-width:100%;height:auto}
   .collab-card{padding:26px 20px}
   .collab-card strong{font-size:28px;line-height:1.15}
   .collab-card p{font-size:14px;margin-bottom:16px}
+  
+  .timeline-track:before{left:14px}
+  .timeline-item{padding-left:42px;margin-bottom:26px}
+  .timeline-dot{left:5px;width:18px;height:18px}
+  .timeline-card{padding:20px 16px}
+  .timeline-title{font-size:20px}
+  .timeline-card .btn-smcp{width:100%;text-align:center}
+  .mini-timeline-card{padding:22px 18px}
   
   .conference-card{padding:24px 20px}
   .gallery-grid{grid-template-columns:1fr;gap:12px}

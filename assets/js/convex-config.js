@@ -86,13 +86,6 @@ function backupInquiryLocally(inquiry) {
  * Interactive Contact Form Handler
  */
 document.addEventListener("DOMContentLoaded", () => {
-  // Update endpoint display tag if present
-  const endpointDisplay = document.getElementById("convexEndpointDisplay");
-  if (endpointDisplay) {
-    const host = new URL(window.CONVEX_CONFIG.httpActionsUrl).host;
-    endpointDisplay.textContent = host;
-  }
-
   const contactForm = document.getElementById("contactForm");
   if (!contactForm) return;
 
@@ -159,7 +152,7 @@ document.addEventListener("DOMContentLoaded", () => {
       showAlert(
         "success",
         `<strong>✓ Message Dispatched Successfully!</strong><br>
-         Thank you, <strong>${escapeHtml(payload.name)}</strong>. Your inquiry has been securely sent to the SMCP Secretariat via Convex (${window.CONVEX_CONFIG.currentEnv}).<br>
+         Thank you, <strong>${escapeHtml(payload.name)}</strong>. Your inquiry has been securely sent to the SMCP Secretariat.<br>
          Our team will review your message and reply to <em>${escapeHtml(payload.email)}</em> promptly.`
       );
       contactForm.reset();

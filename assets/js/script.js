@@ -63,4 +63,33 @@ document.addEventListener('DOMContentLoaded', () => {
       timelineItems.forEach(item => item.classList.add('is-visible'));
     }
   }
+  // Interactive hover & touch toggle for committee agenda overlays
+  const committeeMedias = document.querySelectorAll('.committee-card-media');
+  if (committeeMedias.length > 0) {
+    committeeMedias.forEach(media => {
+      // Tap/click toggles agenda overlay on mobile devices and touchscreens
+      media.addEventListener('click', () => {
+        const wasActive = media.classList.contains('active');
+        committeeMedias.forEach(m => m.classList.remove('active'));
+        if (!wasActive) {
+          media.classList.add('active');
+        }
+      });
+
+      // Keyboard accessibility (Enter/Space toggles agenda)
+      media.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          media.classList.toggle('active');
+        }
+      });
+    });
+
+    // Close overlay when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.committee-card-media')) {
+        committeeMedias.forEach(m => m.classList.remove('active'));
+      }
+    });
+  }
 });

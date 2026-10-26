@@ -72,7 +72,7 @@
           </div>
         </div>
         <div class="col-md-4">
-          <div class="stat-card featured">
+          <div class="stat-card">
             <div class="stat-icon" aria-label="Committees icon">
               <svg class="stat-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="2" y1="13" x2="22" y2="13"/></svg>
             </div>
@@ -99,78 +99,127 @@
   <section class="section">
     <div class="container-xl">
       <div class="d-flex justify-content-between align-items-end flex-wrap gap-3 mb-5">
-        <div><h2 class="section-title-sm mb-3">Our Committees</h2><p class="muted mb-0 max-560">Explore our four confirmed committees across the India and Global editions, addressing international security, economic stability, climate action, and biodiversity.</p></div>
+        <div><h2 class="section-title-sm mb-2">Our Committees</h2><p class="muted mb-0 max-560">Explore our four confirmed committees across the India and Global editions, addressing international security, economic stability, climate action, and biodiversity.</p></div>
         <a class="view-link" href="committees.html">View All Committees 〉</a>
       </div>
-      <div class="committee-strip">
-        <a href="committees.html#disec" class="strip-card bg-disec"><div><h3>DISEC</h3><p>Disarmament &amp; Security</p></div></a>
-        <a href="committees.html#ecosoc" class="strip-card bg-ecosoc"><div><h3>ECOSOC</h3><p>Economic &amp; Social Council</p></div></a>
-        <a href="committees.html#unfccc" class="strip-card bg-unfccc"><div><h3>UNFCCC</h3><p>Climate Change Framework</p></div></a>
-        <a href="committees.html#unfcbd" class="strip-card bg-unfcbd"><div><h3>UNFCBD</h3><p>Biological Diversity</p></div></a>
+      <div class="committee-detail-grid">
+        <!-- Committee 1: DISEC -->
+        <article class="committee-detail-card" id="disec">
+          <div class="committee-card-media" tabindex="0" role="button" aria-label="Toggle DISEC agenda view">
+            <img class="committee-card-img" src="assets/img/committee-disec.jpg" alt="Disarmament and International Security Committee (DISEC) chamber" loading="lazy">
+            <div class="committee-agenda-overlay">
+              <span class="agenda-kicker">Official Committee Agenda</span>
+              <h3 class="agenda-headline">Mitigating the Proliferation of Lethal Autonomous Weapon Systems (LAWS) and Regulating Artificial Intelligence in Modern Warfare</h3>
+              <span class="agenda-conference-badge">India Edition · Online · Nov 7–8, 2026</span>
+            </div>
+          </div>
+          <div class="committee-card-body">
+            <div class="committee-card-head">
+              <div class="committee-icon" aria-label="DISEC Shield Icon">
+                <svg class="committee-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+              </div>
+              <div>
+                <div class="committee-meta">General Assembly First Committee · India Edition</div>
+                <h2>Disarmament &amp; International Security (DISEC)</h2>
+              </div>
+            </div>
+            <p class="committee-desc">Mandated to safeguard global stability, DISEC delegates will negotiate multilateral treaties addressing autonomous weapon technologies, cyber-kinetic escalation, and non-proliferation protocols.</p>
+            <a class="btn-outline-smcp" href="https://mymun.com/conferences/smcp-mun-second-edition-2026/apply" target="_blank" rel="noopener">Register on MyMUN</a>
+          </div>
+        </article>
+
+        <!-- Committee 2: ECOSOC -->
+        <article class="committee-detail-card" id="ecosoc">
+          <div class="committee-card-media" tabindex="0" role="button" aria-label="Toggle ECOSOC agenda view">
+            <img class="committee-card-img" src="assets/img/committee-ecosoc.jpg" alt="Economic and Social Council (ECOSOC) chamber" loading="lazy">
+            <div class="committee-agenda-overlay">
+              <span class="agenda-kicker">Official Committee Agenda</span>
+              <h3 class="agenda-headline">Restructuring Sovereign Debt Frameworks and Fostering Inclusive Post-Crisis Economic Recovery in Developing Economies</h3>
+              <span class="agenda-conference-badge">India Edition · Online · Nov 7–8, 2026</span>
+            </div>
+          </div>
+          <div class="committee-card-body">
+            <div class="committee-card-head">
+              <div class="committee-icon" aria-label="ECOSOC Balance Scales Icon">
+                <svg class="committee-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18"/><path d="M5 8l7-4 7 4"/><path d="M2 13l3-5 3 5a3 3 0 0 1-6 0z"/><path d="M16 13l3-5 3 5a3 3 0 0 1-6 0z"/><line x1="8" y1="21" x2="16" y2="21"/></svg>
+              </div>
+              <div>
+                <div class="committee-meta">Principal United Nations Organ · India Edition</div>
+                <h2>Economic and Social Council (ECOSOC)</h2>
+              </div>
+            </div>
+            <p class="committee-desc">The UN's premier economic forum tackles unsustainable sovereign debt burdens, fiscal restructuring for developing nations, and multilateral stimulus frameworks for equitable global growth.</p>
+            <a class="btn-outline-smcp" href="https://mymun.com/conferences/smcp-mun-second-edition-2026/apply" target="_blank" rel="noopener">Register on MyMUN</a>
+          </div>
+        </article>
+
+        <!-- Committee 3: UNFCCC -->
+        <article class="committee-detail-card" id="unfccc">
+          <div class="committee-card-media" tabindex="0" role="button" aria-label="Toggle UNFCCC agenda view">
+            <img class="committee-card-img" src="assets/img/committee-unfccc.jpg" alt="United Nations Framework Convention on Climate Change (UNFCCC) plenary" loading="lazy">
+            <div class="committee-agenda-overlay">
+              <span class="agenda-kicker">Official Committee Agenda</span>
+              <h3 class="agenda-headline">Operationalizing the Loss and Damage Fund and Accelerating Climate Resilient Infrastructure Financing</h3>
+              <span class="agenda-conference-badge">Global Edition · Online · Dec 12–13, 2026</span>
+            </div>
+          </div>
+          <div class="committee-card-body">
+            <div class="committee-card-head">
+              <div class="committee-icon" aria-label="UNFCCC Climate Leaf Icon">
+                <svg class="committee-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+              </div>
+              <div>
+                <div class="committee-meta">Specialized Environmental Convention · Global Edition</div>
+                <h2>Framework Convention on Climate Change (UNFCCC)</h2>
+              </div>
+            </div>
+            <p class="committee-desc">Delegates will navigate crucial climate diplomacy to establish binding operational rules for the Loss and Damage Fund and channel climate capital directly to vulnerable island states and low-lying regions.</p>
+            <a class="btn-outline-smcp" href="https://mymun.com/conferences/smcp-mun-second-edition-2026/apply" target="_blank" rel="noopener">Register on MyMUN</a>
+          </div>
+        </article>
+
+        <!-- Committee 4: UNFCBD -->
+        <article class="committee-detail-card" id="unfcbd">
+          <div class="committee-card-media" tabindex="0" role="button" aria-label="Toggle UNFCBD agenda view">
+            <img class="committee-card-img" src="assets/img/committee-unfcbd.jpg" alt="Convention on Biological Diversity (UNFCBD) assembly hall" loading="lazy">
+            <div class="committee-agenda-overlay">
+              <span class="agenda-kicker">Official Committee Agenda</span>
+              <h3 class="agenda-headline">Halting Anthropogenic Biodiversity Collapse and Enforcing the 30x30 Protected Areas Framework</h3>
+              <span class="agenda-conference-badge">Global Edition · Online · Dec 12–13, 2026</span>
+            </div>
+          </div>
+          <div class="committee-card-body">
+            <div class="committee-card-head">
+              <div class="committee-icon" aria-label="UNFCBD Biosphere Icon">
+                <svg class="committee-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/><path d="M8 12c0-2.2 1.8-4 4-4s4 1.8 4 4-1.8 4-4 4-4-1.8-4-4z"/></svg>
+              </div>
+              <div>
+                <div class="committee-meta">Multilateral Environmental Treaty · Global Edition</div>
+                <h2>Convention on Biological Diversity (UNFCBD)</h2>
+              </div>
+            </div>
+            <p class="committee-desc">Confronting catastrophic biodiversity loss, delegates will deliberate enforceable conservation mechanisms under the Kunming-Montreal Framework to safeguard 30% of planetary ecosystems by 2030.</p>
+            <a class="btn-outline-smcp" href="https://mymun.com/conferences/smcp-mun-second-edition-2026/apply" target="_blank" rel="noopener">Register on MyMUN</a>
+          </div>
+        </article>
       </div>
     </div>
   </section>
   <section class="section section-soft" id="conferences">
     <div class="container-xl">
       <div class="row g-5 align-items-center">
-        <div class="col-lg-6">
+        <div class="col-lg-7">
           <div class="eyebrow">Collaboration &amp; Partnership</div>
           <h2 class="section-title-sm">Official Partner of United Diplomats</h2>
           <p class="muted">SMCP Model United Nations is proud to be an official partner of United Diplomats. Together, we bring delegates together from around the world for engaging diplomacy, high-level debate, collaboration, and unforgettable committee experiences.</p>
           <p class="muted">At SMCP MUN, diplomacy meets passion and debate creates impact.</p>
-          <div class="mt-4">
-            <a class="btn-outline-smcp" href="conferences.html#conferences">View Conferences <span>→</span></a>
-          </div>
         </div>
-        <div class="col-lg-6">
-          <div class="mini-timeline-card">
-            <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-2">
-              <span class="eyebrow mb-0">Conferences</span>
-            </div>
-            
-            <div class="mini-timeline-track">
-              <!-- Past Conference 1 -->
-              <div class="mini-timeline-item">
-                <span class="mini-dot"></span>
-                <div class="mini-content">
-                  <div class="mini-date">Online · Completed</div>
-                  <strong>1st Online Edition</strong>
-                  <p class="muted mb-0">Our inaugural global online simulation uniting 200+ delegates worldwide.</p>
-                </div>
-              </div>
-
-              <!-- Past Conference 2 -->
-              <div class="mini-timeline-item">
-                <span class="mini-dot"></span>
-                <div class="mini-content">
-                  <div class="mini-date">Online · Completed</div>
-                  <strong>Qadiyya MUN × SMCP MUN</strong>
-                  <p class="muted mb-0">Specialized joint online conference blending diplomacy with mystery-driven investigation.</p>
-                </div>
-              </div>
-
-              <!-- Present Conference 1 -->
-              <div class="mini-timeline-item">
-                <span class="mini-dot active"></span>
-                <div class="mini-content">
-                  <div class="mini-date">Online · Nov 7–8, 2026</div>
-                  <strong>India Edition</strong>
-                  <p class="muted mb-1">Online simulation · Committees: DISEC &amp; ECOSOC · Up to 1,500 INR cash prizes.</p>
-                  <a class="mini-link" href="https://mymun.com/conferences/smcp-mun-second-edition-2026/apply" target="_blank" rel="noopener">Register on MyMUN →</a>
-                </div>
-              </div>
-
-              <!-- Present Conference 2 -->
-              <div class="mini-timeline-item">
-                <span class="mini-dot active"></span>
-                <div class="mini-content">
-                  <div class="mini-date">Online · Dec 12–13, 2026</div>
-                  <strong>Global Edition</strong>
-                  <p class="muted mb-1">Online simulation · Committees: UNFCCC &amp; UNFCBD · 300 delegates across 20+ countries.</p>
-                  <a class="mini-link" href="https://mymun.com/conferences/smcp-mun-second-edition-2026/apply" target="_blank" rel="noopener">Register on MyMUN →</a>
-                </div>
-              </div>
-            </div>
+        <div class="col-lg-5">
+          <div class="collab-card">
+            <span>Upcoming Conferences</span>
+            <strong>November &amp; December 2026</strong>
+            <p>Join SMCP MUN for our upcoming online conferences: the India Edition (Nov 7–8) featuring DISEC &amp; ECOSOC, and the Global Edition (Dec 12–13) featuring UNFCCC &amp; UNFCBD.</p>
+            <a class="btn-smcp" href="https://mymun.com/conferences/smcp-mun-second-edition-2026/apply" target="_blank" rel="noopener">Register on MyMUN</a>
           </div>
         </div>
       </div>
@@ -194,7 +243,17 @@
       </div>
       <div>
         <h5>Connect</h5>
-        <a href="mailto:info.smcpmun@gmail.com">info.smcpmun@gmail.com</a><a href="https://www.instagram.com/smcpmun/" target="_blank" rel="noopener">Instagram</a><a href="https://www.linkedin.com/in/smcp-the-mun-230759407/" target="_blank" rel="noopener">LinkedIn</a>
+        <div class="footer-social-links">
+          <a href="mailto:info.smcpmun@gmail.com" class="footer-social-btn" aria-label="Official Email: info.smcpmun@gmail.com" title="Email info.smcpmun@gmail.com">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          </a>
+          <a href="https://www.instagram.com/smcpmun/" target="_blank" rel="noopener" class="footer-social-btn" aria-label="SMCP Instagram" title="Instagram @smcpmun">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/smcp-the-mun-230759407/" target="_blank" rel="noopener" class="footer-social-btn" aria-label="SMCP LinkedIn Network" title="LinkedIn Network">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+        </div>
       </div>
       <div>
         <h5>Apply</h5>

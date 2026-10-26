@@ -75,11 +75,13 @@ img{max-width:100%;height:auto}
 
 /* Stats */
 .stats-band{background:#f8f9fb}
-.stat-card{background:#fff;border:1px solid #e6eaf0;padding:45px 38px;height:100%;box-shadow:0 10px 26px rgba(0,0,0,.04)}
-.stat-card.featured{border-color:var(--navy);border-width:2px}
+.stat-card{background:#fff;border:2px solid #e6eaf0;padding:44px 37px;height:100%;box-shadow:0 10px 26px rgba(0,0,0,.04);transition:border-color .22s ease,box-shadow .22s ease,transform .22s ease}
+.stat-card:hover{border-color:var(--navy);box-shadow:0 14px 32px rgba(0,34,71,.1);transform:translateY(-3px)}
+.stat-card.featured{border-color:#e6eaf0}
+.stat-card.featured:hover{border-color:var(--navy)}
 .stat-icon{display:inline-flex;align-items:center;justify-content:center;color:var(--navy);margin-bottom:18px;min-height:36px}
-.stat-svg{width:34px;height:34px;stroke:var(--navy);display:inline-block;transition:all .3s ease}
-.stat-card:hover .stat-svg{stroke:var(--accent-gold);transform:scale(1.12)}
+.stat-svg{width:34px;height:34px;stroke:var(--navy);fill:none;display:inline-block;transition:transform .25s ease}
+.stat-card:hover .stat-svg{stroke:var(--navy)!important;fill:none!important;opacity:1!important;visibility:visible!important;transform:scale(1.08)}
 .stat-num{font-family:var(--serif);font-weight:700;font-size:44px;line-height:1;color:var(--navy)}
 .stat-label{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:#485469;margin-top:8px}
 .stat-line{width:54px;height:4px;background:var(--navy);margin-top:24px}
@@ -111,13 +113,6 @@ img{max-width:100%;height:auto}
 .committee-detail-card:hover .committee-card-media .committee-card-img,
 .committee-card-media.active .committee-card-img{transform:scale(1.08);filter:brightness(.58)}
 
-/* Floating pill hint before hover */
-.committee-hover-hint{position:absolute;bottom:14px;right:14px;background:rgba(0,18,42,.85);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);color:#fff;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:6px 14px;border-radius:20px;border:1px solid rgba(255,255,255,.2);display:inline-flex;align-items:center;gap:6px;pointer-events:none;transition:opacity .3s ease,transform .3s ease;z-index:2;box-shadow:0 4px 14px rgba(0,0,0,.25)}
-.committee-hover-hint svg{stroke:var(--accent-gold);flex-shrink:0}
-.committee-card-media:hover .committee-hover-hint,
-.committee-detail-card:hover .committee-hover-hint,
-.committee-card-media.active .committee-hover-hint{opacity:0;transform:translateY(6px)}
-
 /* Agenda Overlay revealed on hover/tap */
 .committee-agenda-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,34,71,.95) 0%,rgba(7,23,45,.98) 100%);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);padding:28px 24px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;color:#fff;opacity:0;visibility:hidden;transform:translateY(14px);transition:opacity .38s cubic-bezier(0.16,1,0.3,1),transform .38s cubic-bezier(0.16,1,0.3,1),visibility .38s;z-index:3}
 .committee-card-media:hover .committee-agenda-overlay,
@@ -132,15 +127,12 @@ img{max-width:100%;height:auto}
 /* Committee Card Body */
 .committee-card-body{padding:28px 26px 30px;display:flex;flex-direction:column;flex-grow:1}
 .committee-card-head{display:flex;align-items:center;gap:14px;margin-bottom:16px}
-.committee-icon{width:46px;height:46px;border-radius:4px;display:flex;align-items:center;justify-content:center;background:#edf2f7;color:var(--navy);flex-shrink:0;transition:background .25s ease,color .25s ease,transform .25s ease}
-.committee-detail-card:hover .committee-icon{background:var(--navy);color:#fff;transform:scale(1.05)}
-.committee-svg{width:24px;height:24px;stroke:currentColor;fill:none}
+.committee-icon{width:auto;height:auto;border-radius:0;display:inline-flex;align-items:center;justify-content:center;background:transparent;color:var(--navy);flex-shrink:0;transition:transform .25s ease}
+.committee-detail-card:hover .committee-icon{background:transparent;color:var(--navy);transform:scale(1.08)}
+.committee-svg{width:28px;height:28px;stroke:var(--navy);fill:none}
 .committee-meta{font-size:11px;text-transform:uppercase;letter-spacing:.14em;color:#52627a;font-weight:800;line-height:1.3}
 .committee-card-body h2{font-family:var(--serif);font-weight:700;font-size:24px;line-height:1.2;margin:4px 0 0;color:var(--navy)}
-.committee-desc{color:#4d5c70;font-size:14.5px;line-height:1.6;margin-bottom:18px}
-.committee-agenda-preview{background:#f6f8fb;border-left:3px solid var(--navy);padding:12px 16px;margin-bottom:22px;border-radius:0 4px 4px 0}
-.committee-agenda-preview strong{font-size:11.5px;text-transform:uppercase;letter-spacing:.1em;color:var(--navy);display:block;margin-bottom:4px}
-.committee-agenda-preview p{font-size:13.5px;color:#334155;margin:0;line-height:1.5}
+.committee-desc{color:#4d5c70;font-size:14.5px;line-height:1.6;margin-bottom:22px}
 .committee-card-body .btn-outline-smcp{margin-top:auto;align-self:flex-start}
 .ready-band{background:#f8f9fb;padding:55px 0}
 
@@ -290,7 +282,14 @@ img{max-width:100%;height:auto}
 .contact-hub-icon{width:38px;height:38px;background:#002247;color:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:16px}
 .contact-hub-copy strong{display:block;font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:#5a687d}
 .contact-hub-copy a,.contact-hub-copy span{font-size:14px;color:#07182e;font-weight:600;word-break:break-word}
-.contact-hub-copy a:hover{color:#002247;text-decoration:underline}
+.contact-card{border:1px solid #dfe5ec;background:#fff;padding:32px;box-shadow:var(--shadow-soft);height:auto!important}
+.contact-card h3{font-family:var(--serif);font-size:24px;font-weight:700;color:#07182e}
+
+/* Footer Social Icons */
+.footer-social-links{display:flex;align-items:center;gap:10px;margin-top:10px;flex-wrap:wrap}
+.footer-social-btn{width:40px;height:40px;border:1px solid rgba(255,255,255,.22);border-radius:4px;display:inline-flex;align-items:center;justify-content:center;color:#d7e1ef;background:rgba(255,255,255,.06);transition:all .22s ease;text-decoration:none}
+.footer-social-btn:hover{background:#fff;color:var(--navy);border-color:#fff;transform:translateY(-2px);box-shadow:0 6px 16px rgba(0,0,0,.25)}
+.footer-social-btn svg{width:18px;height:18px;display:block;stroke:currentColor;fill:none}
 
 
 /* ===================================================

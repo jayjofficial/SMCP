@@ -4,12 +4,17 @@ document.addEventListener('DOMContentLoaded', () => {
     el.textContent = new Date().getFullYear();
   });
 
-  // Mobile navigation toggler support for robust offline & mobile responsiveness
+  // Mobile navigation toggler support: coordinates cleanly with Bootstrap collapse
   const toggler = document.querySelector('.mobile-toggler');
   const mainNav = document.getElementById('mainNav');
 
   if (toggler && mainNav) {
+    // If Bootstrap is not loaded or didn't initialize, provide direct fallback
     toggler.addEventListener('click', (e) => {
+      if (typeof bootstrap !== 'undefined' && bootstrap.Collapse) {
+        // Bootstrap handles toggle via data-bs-toggle="collapse"
+        return;
+      }
       e.stopPropagation();
       const isExpanded = mainNav.classList.contains('show');
       if (isExpanded) {
@@ -24,6 +29,13 @@ document.addEventListener('DOMContentLoaded', () => {
     // Close mobile nav when clicking outside
     document.addEventListener('click', (e) => {
       if (!mainNav.contains(e.target) && !toggler.contains(e.target) && mainNav.classList.contains('show')) {
+        if (typeof bootstrap !== 'undefined' && bootstrap.Collapse) {
+          const bsCollapse = bootstrap.Collapse.getInstance(mainNav);
+          if (bsCollapse) {
+            bsCollapse.hide();
+            return;
+          }
+        }
         mainNav.classList.remove('show');
         toggler.setAttribute('aria-expanded', 'false');
       }
@@ -33,6 +45,13 @@ document.addEventListener('DOMContentLoaded', () => {
     mainNav.querySelectorAll('.nav-link').forEach(link => {
       link.addEventListener('click', () => {
         if (mainNav.classList.contains('show')) {
+          if (typeof bootstrap !== 'undefined' && bootstrap.Collapse) {
+            const bsCollapse = bootstrap.Collapse.getInstance(mainNav);
+            if (bsCollapse) {
+              bsCollapse.hide();
+              return;
+            }
+          }
           mainNav.classList.remove('show');
           toggler.setAttribute('aria-expanded', 'false');
         }

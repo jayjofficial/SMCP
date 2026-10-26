@@ -285,11 +285,97 @@ img{max-width:100%;height:auto}
 .contact-card{border:1px solid #dfe5ec;background:#fff;padding:32px;box-shadow:var(--shadow-soft);height:auto!important}
 .contact-card h3{font-family:var(--serif);font-size:24px;font-weight:700;color:#07182e}
 
-/* Footer Social Icons */
-.footer-social-links{display:flex;align-items:center;gap:10px;margin-top:10px;flex-wrap:wrap}
-.footer-social-btn{width:40px;height:40px;border:1px solid rgba(255,255,255,.22);border-radius:4px;display:inline-flex;align-items:center;justify-content:center;color:#d7e1ef;background:rgba(255,255,255,.06);transition:all .22s ease;text-decoration:none}
-.footer-social-btn:hover{background:#fff;color:var(--navy);border-color:#fff;transform:translateY(-2px);box-shadow:0 6px 16px rgba(0,0,0,.25)}
-.footer-social-btn svg{width:18px;height:18px;display:block;stroke:currentColor;fill:none}
+/* Footer Social Icons - Perfectly Centered */
+.footer-social-links{display:flex;align-items:center;gap:12px;margin-top:12px;flex-wrap:wrap}
+.footer a.footer-social-btn,
+.footer-social-btn{
+  width:44px!important;
+  height:44px!important;
+  border:1px solid rgba(255,255,255,.28)!important;
+  border-radius:6px!important;
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  color:#d7e1ef!important;
+  background:rgba(255,255,255,.07)!important;
+  margin-bottom:0!important;
+  padding:0!important;
+  text-decoration:none!important;
+  transition:all .22s ease!important;
+  box-sizing:border-box!important;
+}
+.footer a.footer-social-btn:hover,
+.footer-social-btn:hover{
+  background:#fff!important;
+  color:var(--navy)!important;
+  border-color:#fff!important;
+  transform:translateY(-2px);
+  box-shadow:0 6px 18px rgba(0,0,0,.35)!important;
+}
+.footer a.footer-social-btn svg,
+.footer-social-btn svg{
+  width:20px!important;
+  height:20px!important;
+  display:block!important;
+  margin:auto!important;
+  stroke:currentColor!important;
+  fill:none!important;
+  transition:stroke .2s ease;
+}
+.footer a.footer-social-btn:hover svg,
+.footer-social-btn:hover svg{
+  stroke:var(--navy)!important;
+}
+
+/* Navigation Register Dropdown */
+.register-slot{position:relative}
+.register-slot .btn-smcp.dropdown-toggle:after{margin-left:.6em;vertical-align:.15em}
+.register-dropdown-menu{
+  background:#fff;
+  border:1px solid #c8d3e0;
+  border-top:3px solid var(--navy);
+  border-radius:0;
+  box-shadow:0 16px 36px rgba(0,24,54,.15);
+  min-width:280px;
+  padding:10px 0;
+  margin-top:8px!important;
+}
+.register-dropdown-menu .dropdown-header{
+  font-size:11px;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  color:#6c7a8d;
+  padding:8px 18px 4px;
+}
+.register-dropdown-menu .dropdown-item{
+  padding:10px 18px;
+  color:var(--navy);
+  font-size:14px;
+  transition:background .18s ease,color .18s ease;
+}
+.register-dropdown-menu .dropdown-item strong{
+  display:block;
+  font-size:14px;
+  color:#061b36;
+}
+.register-dropdown-menu .dropdown-item small{
+  color:#6b7c93;
+  font-size:12px;
+  margin-top:2px;
+}
+.register-dropdown-menu .dropdown-item:hover,
+.register-dropdown-menu .dropdown-item:focus{
+  background:#edf4fb;
+  color:var(--navy);
+}
+.register-dropdown-menu .dropdown-item:hover strong{
+  color:#002247;
+}
+.register-dropdown-menu .dropdown-divider{
+  margin:6px 0;
+  border-color:#e4ebf3;
+}
 
 
 /* ===================================================
@@ -312,6 +398,7 @@ img{max-width:100%;height:auto}
   .navbar-nav .nav-link{font-size:15px;font-weight:600;padding:8px 0!important;width:100%}
   .register-slot{min-width:auto;text-align:left;margin-top:16px;width:100%}
   .register-slot .btn-smcp{width:100%;text-align:center}
+  .register-dropdown-menu{width:100%;min-width:auto}
   
   .hero{min-height:430px;padding:60px 0}
   .legacy-img{height:320px}

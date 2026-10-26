@@ -35,7 +35,23 @@
           <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
-        <div class="register-slot"><a class="btn-smcp" href="https://mymun.com/conferences/smcp-mun-second-edition-2026/apply" target="_blank" rel="noopener">Register</a></div>
+        <div class="register-slot dropdown">
+          <button class="btn-smcp dropdown-toggle" type="button" id="registerNavDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+            Register
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end register-dropdown-menu" aria-labelledby="registerNavDropdown">
+            <li><span class="dropdown-header">Select Conference Edition</span></li>
+            <li><a class="dropdown-item" href="https://mymun.com/conferences/smcp-mun-november-2026" target="_blank" rel="noopener">
+              <strong>November Edition</strong>
+              <small class="d-block text-muted">Nov 7–8, 2026 · Online (DISEC &amp; ECOSOC)</small>
+            </a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="https://mymun.com/conferences/smcp-mun-second-edition-2026/apply" target="_blank" rel="noopener">
+              <strong>December Edition</strong>
+              <small class="d-block text-muted">Dec 12–13, 2026 · Online (UNFCCC &amp; UNFCBD)</small>
+            </a></li>
+          </ul>
+        </div>
       </div>
     </div>
   </nav>
@@ -190,7 +206,8 @@
       <h2>Ready to Shape the Future?</h2>
       <p>Delegate registrations are now open for SMCP Model United Nations. Secure your place at a diplomatic simulation built for debate, growth, and impact.</p>
       <div class="d-flex justify-content-center gap-3 flex-wrap mt-4">
-        <a class="btn-smcp light" href="https://mymun.com/conferences/smcp-mun-second-edition-2026/apply" target="_blank" rel="noopener">Register Now</a>
+        <a class="btn-smcp light" href="https://mymun.com/conferences/smcp-mun-november-2026" target="_blank" rel="noopener">Register · November Edition <span>→</span></a>
+        <a class="btn-smcp light" href="https://mymun.com/conferences/smcp-mun-second-edition-2026/apply" target="_blank" rel="noopener">Register · December Edition <span>→</span></a>
         <a class="btn-outline-smcp light-outline" href="contact.html">Contact Us</a>
       </div>
     </div>
@@ -224,8 +241,11 @@
       </div>
       <div>
         <h5>Apply</h5>
-        <p>Applications for SMCP Model United Nations are open through MyMUN.</p>
-        <a class="btn-smcp light mt-2" href="https://mymun.com/conferences/smcp-mun-second-edition-2026/apply" target="_blank" rel="noopener">Apply on MyMUN</a>
+        <p>Applications for SMCP Model United Nations are open through MyMUN:</p>
+        <div class="d-flex flex-column gap-2 mt-2">
+          <a class="btn-smcp light text-center" href="https://mymun.com/conferences/smcp-mun-november-2026" target="_blank" rel="noopener">November Conference</a>
+          <a class="btn-smcp light text-center" href="https://mymun.com/conferences/smcp-mun-second-edition-2026/apply" target="_blank" rel="noopener">December Conference</a>
+        </div>
       </div>
     </div>
     <div class="footer-bottom"><span>© <span data-year></span> SMCP Model United Nations.</span><span>Diplomacy meets passion. Debate creates impact.</span></div>

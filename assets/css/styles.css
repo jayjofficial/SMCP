@@ -255,7 +255,9 @@ img{max-width:100%;height:auto}
 .footer h4,.footer h5{font-family:var(--serif);font-weight:700}
 .footer p,.footer small{color:#b7c5d8}
 .footer a{display:block;color:#d7e1ef;font-size:13px;margin-bottom:8px}
-.footer-bottom{border-top:1px solid rgba(255,255,255,.16);margin-top:34px;padding-top:20px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;color:#b7c5d8;font-size:12px}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.16);margin-top:34px;padding-top:20px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;color:#b7c5d8;font-size:12px;line-height:1.5}
+.footer-bottom > span{display:inline-block}
+.footer-bottom span[data-year],.footer-bottom [data-year]{display:inline!important;margin:0!important;padding:0!important}
 
 /* Contact Form & Convex Portal */
 .contact-form-card{background:#fff;border:1px solid #07182e;border-top:4px solid #002247;padding:40px;box-shadow:var(--shadow)}
@@ -536,8 +538,10 @@ img{max-width:100%;height:auto}
   .footer-grid{grid-template-columns:1fr;gap:24px}
   .footer-social-links{display:flex!important;flex-direction:row!important;align-items:center!important;justify-content:flex-start!important;gap:12px!important;flex-wrap:wrap!important}
   .footer a.footer-social-btn,.footer-social-btn{width:44px!important;height:44px!important;margin:0!important}
-  .footer-bottom{display:block;text-align:center}
-  .footer-bottom span{display:block;margin-bottom:6px}
+  .footer-bottom{display:flex!important;flex-direction:column!important;align-items:center!important;text-align:center!important;gap:6px!important}
+  .footer-bottom > span{display:inline-block!important;width:100%!important;margin:0!important}
+  .footer-bottom > span:first-child{white-space:nowrap}
+  .footer-bottom span[data-year],.footer-bottom [data-year]{display:inline!important;margin:0!important;padding:0!important}
 }
 
 @media(prefers-reduced-motion:reduce){

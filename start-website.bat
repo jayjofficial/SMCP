@@ -1,6 +1,6 @@
 @echo off
 echo ========================================================
-echo   Starting Sovereign Multilateral Conference of the Parties - MUN Local Preview
+echo   Starting SMCP Model United Nations Local Preview
 echo ========================================================
 echo Website running at http://localhost:8000
 start "" "http://localhost:8000"

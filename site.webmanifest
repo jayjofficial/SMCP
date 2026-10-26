@@ -1,7 +1,7 @@
 {
-  "name": "Sovereign Multilateral Conference of the Parties - MUN",
+  "name": "SMCP Model United Nations",
   "short_name": "SMCP MUN",
-  "description": "Sovereign Multilateral Conference of the Parties - MUN, built for diplomacy and known for excellence.",
+  "description": "SMCP Model United Nations, built for diplomacy and known for excellence.",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#002247",

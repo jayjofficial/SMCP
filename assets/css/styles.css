@@ -18,7 +18,8 @@
 html{scroll-behavior:smooth;overflow-x:hidden;max-width:100%}
 body{margin:0;font-family:var(--sans);color:var(--ink);background:#fff;font-size:16px;line-height:1.65;overflow-x:hidden;max-width:100%;position:relative}
 a{text-decoration:none;color:inherit}
-img{max-width:100%;height:auto}
+img{max-width:100%;height:auto;image-rendering:-webkit-optimize-contrast;image-rendering:auto}
+.legacy-img,.committee-card-img,.gallery-card img,.timeline-bg,.team-photo{backface-visibility:hidden;-webkit-backface-visibility:hidden;transform:translateZ(0)}
 .max-560{max-width:560px}.max-650{max-width:650px}.max-780{max-width:780px}
 
 /* Header & Navigation */
